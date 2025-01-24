@@ -2,6 +2,7 @@ package com.reham11203.islami.home.suras_verses
 
 import android.os.Build
 import android.os.Bundle
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.reham11203.islami.AppConstants
 import com.reham11203.islami.databinding.ActivitySurahDetailsBinding
@@ -17,6 +18,7 @@ class SurahDetailsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         binding = ActivitySurahDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
