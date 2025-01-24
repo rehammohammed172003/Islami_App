@@ -4,7 +4,6 @@
         <!-- Customize your light theme here. -->
         <item name="colorPrimary">@color/primary</item>
         <item name="colorSecondary">@color/primary</item>
-        <item name="android:statusBarColor">@color/darkGray</item>
         <item name="colorOnPrimary">@color/darkGray</item>
     </style>
 
