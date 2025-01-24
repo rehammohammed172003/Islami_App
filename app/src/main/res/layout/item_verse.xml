@@ -22,6 +22,7 @@
             android:background="@color/darkGray">
 
             <TextView
+                android:id="@+id/verse_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/janna_lt_bold"

@@ -5,21 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/darkGray"
-    tools:context=".SurahDetailsActivity"
+    tools:context=".home.suras_verses.SurahDetailsActivity"
 
     >
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/tool_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/darkGray"
             android:elevation="0dp">
 
             <TextView
+                android:id="@+id/surah_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -31,6 +34,8 @@
     </com.google.android.material.appbar.AppBarLayout>
 
 
-    <include layout="@layout/content_surah_details" />
+    <include
+        android:id="@+id/content"
+        layout="@layout/content_surah_details" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

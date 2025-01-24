@@ -22,16 +22,19 @@ class SurasRecyclerAdapter(val surasList: List<Surah>) :
         val surah = surasList[position]
         holder.bind(surah)
 
-        holder.itemView.setOnClickListener {
-            onItemClickListener?.onItemClick(position, surah)
+        onItemClickListener?.let { onClick ->
+            holder.itemView.setOnClickListener {
+                onClick.onItemClick(position, surah)
+            }
         }
+
     }
 
     override fun getItemCount(): Int = surasList.size
 
     var onItemClickListener: OnItemClickListener? = null
 
-    interface OnItemClickListener {
+    fun interface OnItemClickListener {
         fun onItemClick(position: Int, surah: Surah)
     }
 
@@ -39,10 +42,12 @@ class SurasRecyclerAdapter(val surasList: List<Surah>) :
         RecyclerView.ViewHolder(itemBinding.root) {
 
         fun bind(surah: Surah) {
-            itemBinding.surahNumberTv.text = surah.index.toString()
+            val surahNumber = surah.index.toString()
+            itemBinding.surahNumberTv.text = surahNumber
             itemBinding.arSurahNameTv.text = surah.arabicName
             itemBinding.enSurahNameTv.text = surah.englishName
-            itemBinding.versesNumberTv.text = "${surah.versesNumber} Verses"
+            val versesNumber = "${surah.versesNumber} Verses"
+            itemBinding.versesNumberTv.text = versesNumber
         }
     }
 

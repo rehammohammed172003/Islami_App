@@ -7,10 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.reham11203.islami.AppConstants
-import com.reham11203.islami.SurahDetailsActivity
 import com.reham11203.islami.databinding.FragmentQuranBinding
 import com.reham11203.islami.home.bottom_nav_tabs.adapters.SurasRecyclerAdapter
 import com.reham11203.islami.home.bottom_nav_tabs.models.Surah
+import com.reham11203.islami.home.suras_verses.SurahDetailsActivity
 
 class QuranFragment : Fragment() {
 
@@ -146,15 +146,16 @@ class QuranFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         adapter = SurasRecyclerAdapter(suras)
-        adapter.onItemClickListener = object : SurasRecyclerAdapter.OnItemClickListener {
-            override fun onItemClick(position: Int, surah: Surah) {
-                val intent = Intent(activity, SurahDetailsActivity::class.java)
-                intent.putExtra(AppConstants.EXTRA_SURAH, surah)
-                startActivity(intent)
-            }
+        adapter.onItemClickListener = SurasRecyclerAdapter.OnItemClickListener { position, surah ->
+
+            val intent = Intent(activity, SurahDetailsActivity::class.java)
+            intent.putExtra(AppConstants.EXTRA_SURAH, surah)
+            startActivity(intent)
+
 
         }
         binding.recyclerQuran.adapter = adapter
     }
+
 
 }

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/darkGray"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".SurahDetailsActivity"
+    tools:context=".home.suras_verses.SurahDetailsActivity"
     tools:showIn="@layout/activity_surah_details">
 
     <ImageView
@@ -32,6 +32,7 @@
         tools:text="الفاتحة" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/verses_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="32dp"
