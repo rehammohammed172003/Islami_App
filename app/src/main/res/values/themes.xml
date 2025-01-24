@@ -16,4 +16,7 @@
     </style>
 
 
+    <style name="BottomNavigationViewTextStyle">
+        <item name="fontFamily">@font/janna_lt_bold</item>
+    </style>
 </resources>

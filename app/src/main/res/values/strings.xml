@@ -8,4 +8,13 @@
     <string name="supervised_by_mohamed_nabil">Supervised by Mohamed Nabil</string>
     <string name="surah_list">Surah List</string>
 
+    <array name="azkar_list">
+
+        <item>سُبْحـانَ اللهِ</item>
+        <item>الْحَمْدُ لِلَّهِ</item>
+        <item>لا إلَهَ إلَّا اللَّهُ</item>
+        <item>الْلَّهُ أَكْبَرُ</item>
+
+    </array>
+
 </resources>
