@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkGray"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".SurahDetailsActivity"
+    tools:showIn="@layout/activity_surah_details">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/details_background"
+
+        />
+
+    <TextView
+        android:id="@+id/surah_title_ar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/janna_lt_bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textColor="@color/primary"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="الفاتحة" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintHeight_percent="0.75"
+        app:layout_constraintTop_toBottomOf="@+id/surah_title_ar"
+        tools:listitem="@layout/item_verse" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@drawable/quran_background"
+    tools:context=".home.bottom_nav_tabs.fragments.QuranFragment">
+
+    <include
+        android:id="@+id/main_logo"
+        layout="@layout/islami_main_icon" />
+
+    <TextView
+        android:id="@+id/suras_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/janna_lt_bold"
+        android:text="@string/surah_list"
+        android:textColor="@color/offWhite"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_logo" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_quran"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/suras_title_tv"
+        tools:listitem="@layout/quran_surah_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
